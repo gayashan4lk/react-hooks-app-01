@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import { useState } from "react";
 
 const StateHook = (props) => {
@@ -55,25 +55,29 @@ const StateHook = (props) => {
     }
 
     return (
-        <Fragment>
-            <h2>Example</h2>
-            <h4>Props value : {props.value}</h4>
-            <h4>State variable "count" : {count}</h4>
+        <div className="statehook-container">
+            <span><b>Example</b></span>
+            <hr/>
+            <p>Props value : {props.value}</p>
+            <hr/>
+            <p><b>State variable "count" : {count}</b></p>
             <button onClick={handleIncrement}>Increase count</button>
             <button onClick={handleDecrement}>Decrease count</button>
-            <br/>
+            <hr/>
             <h4>State variable "fruit" : {fruit}</h4>
             <button onClick={handleMakeOrange}>Turn Banana to Orange</button>
-            <br/>
+            <hr/>
             <h4>State variable "animal" : {animal}</h4>
             <button onClick={handleMakeBeef}>Turn chicken to Beef</button>
-            <br/>
+            <hr/>
             <h4>State variable "todos" : </h4>
-            {todos.learning.map((item) =>
-                <h4>{item}</h4>
-            )}
+            <ul>
+                {todos.learning.map((item) =>
+                <li>{item}</li>
+                )}
+            </ul>
             <button onClick={handleAddTodos} >Add</button>
-        </Fragment>
+        </div>
     );
 }
 
