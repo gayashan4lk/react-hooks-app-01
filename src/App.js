@@ -9,7 +9,7 @@ const App = () => {
       <div className="app">
         <StateHook value={10} />
         <EffectHook />
-        <Clock />
+        <Clock date={"Today is monday 28 July 2021 :)"} />
       </div>
   );
 }
